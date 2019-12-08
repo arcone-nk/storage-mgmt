@@ -1,0 +1,35 @@
+{
+  "name": "storage-mgmt",
+  "version": "1.0.0",
+  "main": "dist/storage-mgmt.js",
+  "repository": "git@github.com:/arcone-nk/storage-mgmt.git",
+  "author": "Nobuyuki Kondo",
+  "license": "MIT",
+  "description": "HTML 5 local and session storage manager",
+  "bugs": {
+    "url": "https://github.com/arcone-nk/storage-mgmt/issues"
+  },
+  "homepage": "https://github.com/arcone-nk/storage-mgmt",
+  "private": false,
+  "keywords": [
+    "HTML5",
+    "localstorage",
+    "sessionstorage",
+    "javascript",
+    "storage"
+  ],
+  "engines": {
+    "node": ">= 10.15.0",
+    "npm": ">= 5.8.0",
+    "yarn": ">= 1.7.0"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup": "1.27.9",
+    "rollup-plugin-terser": "5.1.2",
+    "rollup-plugin-typescript2": "0.25.3",
+    "typescript": "3.7.3"
+  }
+}
