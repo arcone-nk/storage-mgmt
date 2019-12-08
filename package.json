@@ -1,6 +1,6 @@
 {
   "name": "storage-mgmt",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "dist/storage-mgmt.js",
   "repository": "git@github.com:/arcone-nk/storage-mgmt.git",
   "author": "Nobuyuki Kondo",
@@ -24,9 +24,16 @@
     "yarn": ">= 1.7.0"
   },
   "scripts": {
+    "prebuild": "eslint src/*.ts",
     "build": "rollup -c"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.10.0",
+    "@typescript-eslint/parser": "2.10.0",
+    "eslint": "6.7.2",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "prettier": "1.19.1",
     "rollup": "1.27.9",
     "rollup-plugin-terser": "5.1.2",
     "rollup-plugin-typescript2": "0.25.3",
