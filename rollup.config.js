@@ -1,4 +1,4 @@
-import typescript from 'rollup-plugin-typescript2'
+import typescript from '@rollup/plugin-typescript'
 import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
@@ -6,7 +6,7 @@ const _start = 2019
 const _now = new Date().getFullYear()
 const year = _now > _start ? `${_start} - ${_now}` : _start
 const copy = `/*!
-simple HTML 5 Storage Management
+Simple HTML5 storage management
 ${pkg.description}
 
 ${pkg.homepage}
@@ -36,7 +36,11 @@ export default {
   ],
 
   plugins: [
-    typescript(),
+    typescript({
+      // declaration: true,
+      // outDir: 'types',
+      // declarationDir: './types'
+    }),
     terser({
       sourcemap: false,
       include: [/^.+\.min\.js$/]
