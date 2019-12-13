@@ -36,11 +36,7 @@ export default {
   ],
 
   plugins: [
-    typescript({
-      // declaration: true,
-      // outDir: 'types',
-      // declarationDir: './types'
-    }),
+    typescript(),
     terser({
       sourcemap: false,
       include: [/^.+\.min\.js$/]
