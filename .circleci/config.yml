@@ -1,0 +1,61 @@
+# Javascript Node CircleCI 2.1 configuration file
+# 変更したら `$ circleci config validate` で設定ファイルが間違っていないかチェック
+version: 2.1
+
+# ここに好きな名前で executor を定義できる
+executors:
+  default:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:10.15
+
+# コマンド定義
+commands:
+  restore_npm:
+    steps:
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+  save_npm:
+    steps:
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+jobs:
+  build:
+    executor:
+      name: default
+    steps:
+      - checkout
+      - restore_npm
+      - run: yarn install
+
+      # build
+      - run: yarn run build
+
+## test job
+#  test:
+#    executor:
+#      name: default
+#    steps:
+#      - checkout
+#      - restore_npm
+#      - run: yarn install
+#      - save_npm
+#
+#      # run tests!
+#      - run: yarn test
+
+workflows:
+  version: 2
+  test_and_build:
+    jobs:
+      - build
+#      - test:
+#          requires:
+#            - build
