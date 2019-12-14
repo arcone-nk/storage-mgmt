@@ -39,23 +39,23 @@ jobs:
       - run: yarn run build
 
 ## test job
-#  test:
-#    executor:
-#      name: default
-#    steps:
-#      - checkout
-#      - restore_npm
-#      - run: yarn install
-#      - save_npm
-#
-#      # run tests!
-#      - run: yarn test
+  test:
+    executor:
+      name: default
+    steps:
+      - checkout
+      - restore_npm
+      - run: yarn install
+      - save_npm
+
+      # run tests!
+      - run: yarn test
 
 workflows:
   version: 2
   test_and_build:
     jobs:
       - build
-#      - test:
-#          requires:
-#            - build
+      - test:
+          requires:
+            - build

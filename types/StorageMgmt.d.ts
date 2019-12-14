@@ -1,4 +1,3 @@
-declare type Val = null | boolean | string | number | object | Array<null | boolean | number | object>;
 export default class StorageMgmt {
     private _storage;
     constructor(type: 'local' | 'session');
@@ -7,12 +6,12 @@ export default class StorageMgmt {
      * @param key
      * @param val
      */
-    set(key: string, val: Val): StorageMgmt;
+    set<T>(key: string, val: T): StorageMgmt;
     /**
      * get item
      * @param key
      */
-    get(key: string): Val;
+    get<T>(key: string): T;
     /**
      * remove item
      * @param key
@@ -23,4 +22,3 @@ export default class StorageMgmt {
      */
     clear(): void;
 }
-export {};

@@ -1,11 +1,3 @@
-type Val =
-  | null
-  | boolean
-  | string
-  | number
-  | object
-  | Array<null | boolean | number | object>
-
 export default class StorageMgmt {
   private _storage: Storage
 
@@ -22,7 +14,7 @@ export default class StorageMgmt {
    * @param key
    * @param val
    */
-  public set(key: string, val: Val): StorageMgmt {
+  public set<T>(key: string, val: T): StorageMgmt {
     this._storage.setItem(key, JSON.stringify(val, null, 0))
     return this
   }
@@ -31,7 +23,7 @@ export default class StorageMgmt {
    * get item
    * @param key
    */
-  public get(key: string): Val {
+  public get<T>(key: string): T {
     const item = this._storage.getItem(key)
     return item === null ? null : JSON.parse(item)
   }

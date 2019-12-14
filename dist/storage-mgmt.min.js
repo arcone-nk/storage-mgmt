@@ -1,5 +1,5 @@
 /*!
-simple HTML 5 Storage Management
+Simple HTML5 storage management
 HTML 5 local and session storage manager
 
 https://github.com/arcone-nk/storage-mgmt
