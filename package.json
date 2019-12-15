@@ -1,10 +1,10 @@
 {
   "name": "@arcone-nk/storage-mgmt",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "dist/storage-mgmt.js",
   "repository": {
     "type": "git",
-    "url": "ssh://github.com:/arcone-nk/storage-mgmt.git"
+    "url": "git://github.com/arcone-nk/storage-mgmt.git"
   },
   "author": "Nobuyuki Kondo",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "url": "https://github.com/arcone-nk/storage-mgmt/issues"
   },
   "homepage": "https://github.com/arcone-nk/storage-mgmt",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/@arcone-nk" },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "private": false,
   "keywords": [
     "HTML5",
