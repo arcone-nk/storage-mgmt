@@ -10,6 +10,7 @@
     "url": "https://github.com/arcone-nk/storage-mgmt/issues"
   },
   "homepage": "https://github.com/arcone-nk/storage-mgmt",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "private": false,
   "keywords": [
     "HTML5",
