@@ -11,6 +11,7 @@ jobs:
     name: check version, add tag and release
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: checkout
         uses: actions/checkout@v1
       - name: setup Node
@@ -28,10 +29,19 @@ jobs:
           REPO: ${{github.repository}}
           COMMIT: ${{github.sha}}
         run: ./release.sh
-      - name: test
-        run: npm run test
-      - name: build
-        run: npm run build
+      - uses: borales/actions-yarn@v2.0.0
+          with:
+            cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build # will run `yarn build` command
+       - uses: borales/actions-yarn@v2.0.0
+         with:
+           cmd: test # will run `yarn test` command
+#      - name: test
+#        run: npm run test
+#      - name: build
+#        run: npm run build
       - name: release
         run: npm publish --access public
         env:
