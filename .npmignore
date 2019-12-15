@@ -1,0 +1,12 @@
+node_modules
+.node-version
+.editorconfig
+.eslintrc.yml
+.prettierrc
+jest.config.js
+rollup.config.js
+*.iml
+*.log
+tests
+.idea
+coverage
