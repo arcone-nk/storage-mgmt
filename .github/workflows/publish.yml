@@ -19,10 +19,6 @@ jobs:
         with:
           node-version: 10.x
           registry-url: 'https://registry.npmjs.org'
-      - name: install can-npm-publish and dependencies
-        run: |
-          npm install can-npm-publish
-          npm ci
       - name: check version and add tag
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -32,6 +28,8 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
+        run: |
+          yarn add can-npm-publish
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build # will run `yarn build` command
