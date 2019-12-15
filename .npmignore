@@ -11,3 +11,7 @@ tests
 .idea
 coverage
 .github
+src
+.circleci
+release.sh
+tsconfig.json
