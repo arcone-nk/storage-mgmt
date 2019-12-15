@@ -1,6 +1,6 @@
 {
   "name": "storage-mgmt",
-  "version": "0.0.17",
+  "version": "0.1.0",
   "main": "dist/storage-mgmt.js",
   "repository": {
     "type": "git",
