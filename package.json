@@ -1,6 +1,6 @@
 {
   "name": "@arcone-nk/storage-mgmt",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "main": "dist/storage-mgmt.js",
   "repository": {
     "type": "git",
