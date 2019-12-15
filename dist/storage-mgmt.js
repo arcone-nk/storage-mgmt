@@ -3,7 +3,7 @@ Simple HTML5 storage management
 Simple HTML 5 local and session storage manager
 
 https://github.com/arcone-nk/storage-mgmt
-Version: 0.1.0
+Version: 1.0.0
 Licence: MIT
 
 Copyright (c) 2019 Nobuyuki Kondo
