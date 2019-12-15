@@ -38,10 +38,6 @@ jobs:
        - uses: borales/actions-yarn@v2.0.0
          with:
            cmd: test # will run `yarn test` command
-      #      - name: test
-      #        run: npm run test
-      #      - name: build
-      #        run: npm run build
       - name: release
         run: npm publish --access public
         env:
