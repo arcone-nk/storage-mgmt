@@ -1,10 +1,11 @@
 {
   "name": "@arcone-nk/storage-mgmt",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/storage-mgmt.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/arcone-nk/storage-mgmt.git"
+    "url": "ssh://git@github.com/arcone-nk/storage-mgmt.git",
+    "directory": "@arcone-nk/storage-mgmt"
   },
   "author": "Nobuyuki Kondo",
   "license": "MIT",
