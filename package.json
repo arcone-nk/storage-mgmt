@@ -2,6 +2,7 @@
   "name": "storage-mgmt",
   "version": "0.1.0",
   "main": "dist/storage-mgmt.js",
+  "types": "types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git://github.com/arcone-nk/storage-mgmt.git"
