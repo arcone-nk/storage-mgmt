@@ -6,7 +6,7 @@ const _start = 2019
 const _now = new Date().getFullYear()
 const year = _now > _start ? `${_start} - ${_now}` : _start
 const copy = `/*!
-Simple HTML5 storage management
+Simple Storage Manager
 ${pkg.description}
 
 ${pkg.homepage}

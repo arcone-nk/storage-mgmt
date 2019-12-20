@@ -1,6 +1,6 @@
 {
   "name": "storage-mgmt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/storage-mgmt.js",
   "types": "types/index.d.ts",
   "repository": {
@@ -9,7 +9,7 @@
   },
   "author": "Nobuyuki Kondo",
   "license": "MIT",
-  "description": "Simple HTML 5 local and session storage manager",
+  "description": "It's a simple HTML 5 local and session storage management",
   "bugs": {
     "url": "https://github.com/arcone-nk/storage-mgmt/issues"
   },

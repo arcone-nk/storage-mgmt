@@ -11,7 +11,7 @@ export default class StorageMgmt {
      * get item
      * @param key
      */
-    get<T>(key: string): T;
+    get<T>(key: string): T | null;
     /**
      * remove item
      * @param key
