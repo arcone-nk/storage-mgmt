@@ -1,5 +1,7 @@
 # Simple Storage Manager
 
+[![CircleCI](https://circleci.com/gh/arcone-nk/storage-mgmt/tree/master.svg?style=svg)](https://circleci.com/gh/arcone-nk/storage-mgmt/tree/master)
+
 Simple HTML5 storage management (local storage and session storage)
 
 ## install
