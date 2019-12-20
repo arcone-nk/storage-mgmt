@@ -23,7 +23,7 @@ export default class StorageMgmt {
    * get item
    * @param key
    */
-  public get<T>(key: string): T {
+  public get<T>(key: string): T | null {
     const item = this._storage.getItem(key)
     return item === null ? null : JSON.parse(item)
   }
